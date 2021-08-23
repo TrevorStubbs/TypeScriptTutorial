@@ -1,17 +1,14 @@
-// Object Definition
-// const person: {
-//   name: string;
-//   age: number;
-// } 
-var person = {
-    name: 'Trevor',
-    age: 39,
-    hobbies: ['Sport', 'Cooking']
-};
-console.log(person.name);
-var favoriteActivities;
-favoriteActivities = ['Sports'];
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.trim());
+// Unknown Type
+var userInput; //unknown;
+var userName;
+userInput = 'Max';
+userInput = 5;
+// Need an extra type check to when using unknown.
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
+// Never function return type
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+generateError('An error occurred', 500);
